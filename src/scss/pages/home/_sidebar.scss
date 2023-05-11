@@ -1,0 +1,104 @@
+@use '../../components/buttons' as button;
+
+.sidebar {
+
+    background-color: var(--color-light-300);
+    color: var(--color-dark-200);
+
+    &__inner {
+        padding: var(--gap-m);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__select-buttons {
+        // background-color: darkcyan; // temp
+        padding: var(--gap-m) var(--gap-s);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+    }
+
+    &__select-button {
+        @include button.default;
+
+    }
+
+    &__select-details {
+        flex: 1;
+        width: 100%;
+        background-color: var(--color-light-500);
+    }
+
+    &__add-button-container {
+        // background-color: darkorange; // temp
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__add-button {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-4);
+
+    }
+
+}
+
+.widget {
+
+    width: 100%;
+    background-color: var(--color-light);
+    padding: var(--gap-s);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    &__content {
+        width: 100%;
+        // background-color: azure; // temp
+        font-size: var(--font-size-2);
+
+        &--time {
+            font-size: var(--font-size-3);
+            font-weight: 500;
+        }
+    }
+}
+
+.collapse-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--color-light-500);
+
+    &__button {
+
+        background-color: transparent;
+
+        span {
+            color: var(--color-dark-200);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+
+}

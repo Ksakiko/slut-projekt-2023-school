@@ -1,0 +1,38 @@
+.main-board {
+
+    background-color: var(--color-light-100);
+    padding: 3rem 0;
+
+    &__inner {
+        grid-column: inner;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        // background-color: rgb(169, 205, 193); // temp
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--min-item), 1fr));
+        gap: 1rem;
+
+        li {
+            background-color: white; // temp
+            border: solid 5px darkgreen; // temp
+            display: block;
+            width: var(--min-item);
+            height: var(--min-item);
+            display: flex;
+            justify-self: center;
+            align-self: center;
+        }
+
+        li:nth-of-type(odd) {
+            background-color: white; // temp
+            border: solid 5px darkblue; // temp
+        }
+    }
+
+
+}

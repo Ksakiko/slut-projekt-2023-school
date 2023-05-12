@@ -23,7 +23,6 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
-
     }
 
     &__select-button {
@@ -34,7 +33,7 @@
     &__select-details {
         flex: 1;
         width: 100%;
-        background-color: var(--color-light-500);
+        background-color: var(--color-light-500); 
     }
 
     &__add-button-container {

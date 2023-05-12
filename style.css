@@ -253,16 +253,14 @@ li {
 .notes__input {
   width: 100%;
   height: 100%;
-  text-align: start;
+  color: var(--color-dark-200);
+  font-size: var(--font-size-2);
+  font-family: var(--font-sans);
+  resize: none;
 }
 .notes__input::placeholder {
-  text-align: start;
   color: var(--color-accent);
-  font-size: var(--font-size-2);
   opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+// TODO remove enter submit for notes app. Add enter function in input field
+
 const notesApp = () => {
 
     const mainBoardList = document.querySelector('.main-board__list')
@@ -10,39 +12,32 @@ const notesApp = () => {
         notesForm.classList.add('notes__form')
         notesForm.setAttribute("id", "notes-form")
         
-        const notesInput = document.createElement('input')
+        const notesInput = document.createElement('textarea')
         notesInput.classList.add('notes__input')
-        notesInput.setAttribute("type", "text")
+        notesInput.setAttribute('type', 'text')
+        notesInput.setAttribute('id', 'notes-input')
         notesInput.setAttribute("placeholder", "Here you can write notes...")
 
         notesForm.append(notesInput)
         sidebarBoard.append(notesForm)
 
-        // Add attribute on the add button for addNotesForm
-        addButton.setAttribute("type", "submit")
-        addButton.setAttribute("form", "notes-form")
-
-        notesForm.addEventListener('submit', submitNotes)
-
+        addButton.addEventListener('click', submitNotes)
     }
-
-    const submitNotes = (event) => {        
-
-        event.preventDefault()
-
-        const notes = event.target[0].value
-
+    
+    const submitNotes = () => {        
+        
+        const notes = document.getElementById('notes-input').value
+              
         if ( !notes ) return
 
         showNotes(notes)
 
-        event.target[0].value = ''
+        document.getElementById('notes-input').value = ''
 
     }
 
     const showNotes = (notes) => {
 
-        
         const notesEl = document.createElement('li')
         notesEl.classList.add('main-board__item', 'main-board__item--note')
         

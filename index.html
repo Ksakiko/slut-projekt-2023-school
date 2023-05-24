@@ -1,5 +1,3 @@
-<!-- ADD switch for classic mode(flexible) and modern mode(grid) -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +16,8 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="src/scss/js/collapseToggle.js" defer></script>
-    <script type="module" src="src/scss/js/addNewItem.js" defer></script>
-    <script type="module" src="src/scss/js/notes.js" defer></script>
-    <script type="module" src="src/scss/js/colorSelectionApp.js" defer></script>
+    <script src="src/scss/js/dateAndTime.js" defer></script>
+    <script type="module" src="src/scss/js/main.js" defer></script>
 </head>
 <body>
 
@@ -34,7 +31,6 @@
             </ul>
         
         </div>
-
 
     </main>
 
@@ -52,9 +48,9 @@
             
             <section class="widget">
 
-                <div class="widget__content widget__content--date">May 10, 2023</div>
-                <div class="widget__content widget__content--time">15:00</div>
-                <div class="widget__content widget__content--weather">Sunny 18&#8451</div>
+                <div class="widget__content widget__content--date"></div>
+                <div class="widget__content widget__content--time"></div>
+                <!-- <div class="widget__content widget__content--weather">Sunny 18&#8451</div> -->
 
             </section>
 
@@ -69,17 +65,12 @@
                         checklist_rtl
                     </span>
                 </button>
-                <button class="sidebar__select-button sidebar__select-button--grocery-list">
-                    <span class="material-symbols-outlined">
-                        shopping_cart
-                    </span>
-                </button>
                 <button class="sidebar__select-button sidebar__select-button--photo">
                     <span class="material-symbols-outlined">
                         image
                     </span>
                 </button>
-                <button class="sidebar__select-button sidebar__select-button-quote">
+                <button class="sidebar__select-button sidebar__select-button--quote">
                     <span class="material-symbols-outlined">
                         format_quote
                     </span>
@@ -87,6 +78,19 @@
             </section>
 
             <div class="sidebar__select-details">
+
+                <!-- Temp -->
+                <!-- <div class="dropzone">
+        
+                    <input type="file" class="image__file" id="image"
+                            accept="image/png, image/jpeg" />
+                    <label for="images">Choose an image file</label>
+        
+                    <h3>or drag & drop your PNG or JPEG files here</h3>
+                
+                </div> -->
+                <!-- Temp -->
+
             </div>
 
             <div class="sidebar__add-button-and-color-container">

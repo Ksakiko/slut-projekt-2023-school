@@ -1,10 +1,9 @@
-.notes {
+.notes, .todo {
 
     &__form {
         width: 100%;
         height: 100%;
         padding: 0.5rem;
-    
     }
     
     &__input {
@@ -19,6 +18,28 @@
             color: var(--color-accent);
             opacity: 0.5;
         }
+    }
+}
+
+.todo {
+
+    &__input {
+        height: auto;
+    }
+
+}
+
+.dropzone {
+    padding: var(--gap-m);
+    font-family: var(--font-sans);
+    color: var(--color-dark-400);
+
+    button {
+        border: none;
+    }
+    input {
+        margin-bottom: 0.5rem;
+
     }
 
 }
